@@ -1,2 +1,2 @@
 # fselect
-fselect是一个替换掉丑陋原生select小扩展.
+fselect是一个替换掉难以修改的原生select小扩展.
