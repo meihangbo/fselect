@@ -1,1 +1,545 @@
-<div>fselect</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fselect-example</title>
+        <link rel="stylesheet" type="text/css" href="base.css"/>
+        <link rel="stylesheet" type="text/css" href="fselect.css"/>
+        <link rel="stylesheet" type="text/css" href="example.css"/>
+
+        <script type="text/javascript" src="lib/jquery.min.js"></script>
+        <script type="text/javascript" src="../src/jquery.fselect.min.js"></script>
+        <script type="text/javascript" src="lib/laycode/laycode.js"></script>
+    </head>
+    <body >
+        <div class="example-box">
+            <p class="ex-p">1.最简单使用 : </p>
+            <div class="ml20">
+                <div class="fun-clear">
+                    <div class="fun-fl pt10">原生select
+                        <select name="">
+                            <option value="">请选择</option>
+                            <option value="610100">西安市</option>
+                            <option value="610200">铜川市</option>
+                            <option value="610300">宝鸡市</option>
+                            <option value="610400">咸阳市</option>
+                            <option value="610500">渭南市</option>
+                            <option value="610600">延安市</option>
+                            <option value="610700">汉中市</option>
+                            <option value="610800">榆林市</option>
+                            <option value="610900">安康市</option>
+                            <option value="611000">商洛市</option>
+                        </select>
+                        转换
+                    </div>
+                    <div class="fun-fl ml20">
+                        <select name="" id="ex_0" class="ex_0">
+                            <option value="">请选择</option>
+                            <option value="610100">西安市</option>
+                            <option value="610200">铜川市</option>
+                            <option value="610300">宝鸡市</option>
+                            <option value="610400">咸阳市</option>
+                            <option value="610500">渭南市</option>
+                            <option value="610600">延安市</option>
+                            <option value="610700">汉中市</option>
+                            <option value="610800">榆林市</option>
+                            <option value="610900">安康市</option>
+                            <option value="611000">商洛市</option>
+                        </select>
+                    </div>
+                </div><!--原生select-->
+                <div class="laycode">
+<pre class="codes"id="ex_0_code">
+js 代码 : $('#ex_0').fselect();
+html :
+&lt;select name="" id="ex_0" class="ex_0"&gt;
+    &lt;option value=""&gt;请选择&lt;/option&gt;
+    &lt;option value="610100"&gt;西安市&lt;/option&gt;
+    &lt;option value="610200"&gt;铜川市&lt;/option&gt;
+    &lt;option value="610300"&gt;宝鸡市&lt;/option&gt;
+    &lt;option value="610400"&gt;咸阳市&lt;/option&gt;
+    &lt;option value="610500"&gt;渭南市&lt;/option&gt;
+    &lt;option value="610600"&gt;延安市&lt;/option&gt;
+    &lt;option value="610700"&gt;汉中市&lt;/option&gt;
+    &lt;option value="610800"&gt;榆林市&lt;/option&gt;
+    &lt;option value="610900"&gt;安康市&lt;/option&gt;
+    &lt;option value="611000"&gt;商洛市&lt;/option&gt;
+&lt;/select&gt;</pre>
+                </div>
+
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">非原生select</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_1"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_1_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_1"&gt;&lt;/div&gt;
+JS代码 : $('#ex_1').fselect();</pre>
+                </div>
+            </div>
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <p class="ex-p">2.参数使用 : </p>
+            <div class="ml20">
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">width:宽度的使用</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_2"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_2_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_2"&gt;&lt;/div&gt;
+JS代码 : $('#ex_2').fselect({width:300});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">height:高度的使用</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_3"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_3_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_3"&gt;&lt;/div&gt;
+JS代码 : $('#ex_3').fselect({height:40});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">data:数据</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_4"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_4_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_4"&gt;&lt;/div&gt;
+JS代码 :
+    $('#ex_4').fselect({
+        width:100,
+        data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+    });</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">colnumber:显示行数</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_5"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_5_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_5"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_5').fselect({
+    width:100,
+    colnumber:3,
+    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">arrowclass :箭头样式</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_6"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_6_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_6"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_6').fselect({
+    arrowclass:'fselect_arrow_1',//名字可自定义
+    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">defaulttext : 未选择显示的下拉项文本</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_7"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_7_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_7"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_7').fselect({
+    defaulttext:'请选择城市...',
+    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', fasle],['610400', '咸阳市', false]]
+});</pre>
+                </div>
+                <!--***********************************************-->
+            </div>
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <p class="ex-p">3.方法的使用 : </p>
+            <div class="ml20">
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">val :获取值</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_8"></div>
+                    </div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn getval">获取值</a></div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_8_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_8"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_8').fselect({
+    arrowclass:'fselect_arrow_1',//名字可自定义
+    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+});
+$('#ex_8').fselect('val');</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">val : 设置值选中</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_9"></div>
+                    </div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn setval">设置值</a></div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_9_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_9"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_9').fselect({
+    data:[['610100', '西安市', false],['610200', '铜川市', false]]
+});
+$('#ex_9').fselect('val','610100');</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">loaddata : 加载值</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_10"></div>
+                    </div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn loaddata">加载值</a></div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_10_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_10"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_10').fselect({
+    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+});
+$('#ex_10').fselect('loaddata',[['610300', '宝鸡市'],['610400', '咸阳市',true],['610100', '西安市']],function (){
+    alert('加载完成!');
+});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">additem : 追加值</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_11"></div>
+                    </div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn additem">追加值</a></div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_11_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_11"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_11').fselect({
+    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+});
+$('#ex_11').fselect('additem',[['610300', '宝鸡市'],['610400', '咸阳市',true],['610100', '西安市']],function (){
+    alert('加载完成!');
+});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">removeitem : 删除下拉项</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_12"></div>
+                    </div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn removeitem">删除值</a></div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_12_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_12"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_12').fselect({
+    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+});
+$('#ex_12').fselect('removeitem',[['610300','610400','610100']],function (){
+    alert('删除完成!');
+});</pre>
+                </div>
+                <!--***********************************************-->
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">disabled/enable : 禁用/启用下拉</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_13"></div>
+                    </div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn disabled">禁用</a></div>
+                    <div class="fun-fl pt15 pl20"><a href="javascript:;" class="btn enable">启用</a></div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_13_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_12"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_13').fselect({
+    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+});
+$('#ex_13').fselect('disabled',function (){alert('禁用完成!');});
+$('#ex_13').fselect('enable',function (){alert('启用完成!');});</pre>
+                </div>
+                <!--***********************************************-->
+            </div>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <p class="ex-p">4.事件的使用 : </p>
+            <div class="ml20">
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">onselect : 选中下拉选项后触发</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_14"></div>
+                    </div>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_14_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_14"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_14').fselect({
+    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+});
+$('#ex_14').fselect('onselect',function (_data){alert(_data);});</pre>
+                </div>
+                <!--***********************************************-->
+            </div>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <p class="ex-p">5.其它测试: </p>
+            <div class="ml20">
+                <div class="fun-clear">
+                    <div class="fun-fl pt15">测试IE6 select 遮挡</div>
+                    <div class="fun-fl ml20">
+                        <div class="fselectbox" id="ex_15"></div>
+                    </div>
+                </div>
+                <div>
+                    <select name="" style="width:100%">
+                        <option value="">请选择...</option>
+                        <option value="1">陕西省</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" style="width:100%">
+                        <option value="">请选择...</option>
+                        <option value="1">西安市</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="" style="width:100%">
+                        <option value="">请选择...</option>
+                        <option value="1">测试一</option>
+                    </select>
+                </div>
+                <div class="laycode">
+                    <pre class="codes"id="ex_15_code">
+Html代码 (class 'fselectbox'必须有): &lt;div class="fselectbox" id="ex_15"&gt;&lt;/div&gt;
+JS代码 :
+$('#ex_15').fselect({
+    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+});</pre>
+                </div>
+                <!--***********************************************-->
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function (){
+                $('#ex_0').fselect();
+                $('#ex_0_code').laycode({
+                    title: '原生select',
+                    skin:1,
+                    height:100,
+                    by:false
+                });
+
+                $('#ex_1').fselect();
+                $('#ex_1_code').laycode({
+                    title: '非原生select',
+                    skin:1,
+                    height:45,
+                    by:false
+                });
+
+                $('#ex_2').fselect({width:300});
+                $('#ex_2_code').laycode({
+                    title: 'width的使用',
+                    skin:1,
+                    height:45,
+                    by:false
+                });
+
+                $('#ex_3').fselect({width:300,height:40});
+                $('#ex_3_code').laycode({
+                    title: 'height的使用',
+                    skin:1,
+                    height:45,
+                    by:false
+                });
+
+                $('#ex_4').fselect({
+                    width:100,
+                    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+                });
+                $('#ex_4_code').laycode({
+                    title: 'data 数据',
+                    skin:1,
+                    height:165,
+                    by:false
+                });
+
+                $('#ex_5').fselect({
+                    width:100,
+                    colnumber:3,
+                    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+                });
+                $('#ex_5_code').laycode({
+                    title: 'colnumber 设置',
+                    skin:1,
+                    height:190,
+                    by:false
+                });
+
+                $('#ex_6').fselect({
+                    arrowclass:'fselect_arrow_1',//名字可自定义
+                    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+                });
+                $('#ex_6_code').laycode({
+                    title: 'arrowclass 设置',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+
+                $('#ex_7').fselect({
+                    defaulttext:'请选择城市...',
+                    data:[['610100', '西安市'],['610200', '铜川市'],['610300', '宝鸡市'],['610400', '咸阳市']]
+                });
+                $('#ex_7_code').laycode({
+                    title: '未选择显示的下拉项文本',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+
+                $('#ex_8').fselect({
+                    arrowclass:'fselect_arrow_1',//名字可自定义
+                    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+                });
+                $('#ex_8_code').laycode({
+                    title: '获取值方法',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+                $('.example-box').on('click','.getval',function (){
+                    alert($('#ex_8').fselect('val'));
+                });
+
+                $('#ex_9').fselect({
+                    data:[['610100', '西安市', false],['610200', '铜川市', false]]
+                });
+                $('#ex_9_code').laycode({
+                    title: '设置值方法',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+                $('.example-box').on('click','.setval',function (){
+                    $('#ex_9').fselect('val','610100');
+                });
+
+                $('#ex_10').fselect({
+                    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+                });
+                $('#ex_10_code').laycode({
+                    title: '加载值方法',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+                $('.example-box').on('click','.loaddata',function (){
+                    $('#ex_10').fselect('loaddata',[['610300', '宝鸡市'],['610400', '咸阳市',true],['610100', '西安市']],function (){
+                        alert('加载完成!');
+                    });
+                });
+
+                $('#ex_11').fselect({
+                    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+                });
+                $('#ex_11_code').laycode({
+                    title: 'additem 追加值方法',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+                $('.example-box').on('click','.additem',function (){
+                    $('#ex_11').fselect('additem',[['610300', '宝鸡市'],['610400', '咸阳市',true],['610100', '西安市']],function (){
+                        alert('追加完成!');
+                    });
+                });
+
+                $('#ex_12').fselect({
+                    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+                });
+                $('#ex_12_code').laycode({
+                    title: 'removeitem 删除下拉项方法',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+                $('.example-box').on('click','.removeitem',function (){
+                    $('#ex_12').fselect('removeitem',['610300','610400','610100'],function (){
+                        alert('删除完成!');
+                    });
+                });
+
+                $('#ex_13').fselect({
+                    data:[['610100', '西安市', true],['610200', '铜川市', false]]
+                });
+                $('#ex_13_code').laycode({
+                    title: 'disabled/enable 禁用/启用下拉项方法',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+                $('.example-box').on('click','.disabled',function (){
+                    $('#ex_13').fselect('disabled',function (){
+                        alert('禁用完成!');
+                    });
+                }).on('click','.enable',function (){
+                    $('#ex_13').fselect('enable',function (){
+                        alert('启用完成!');
+                    });
+                });
+
+                $('#ex_14').fselect({
+                    data:[['610100', '西安市', true],['610200', '铜川市', false]],
+                    onselect:function (_data){
+                        alert(_data);
+                    }
+                });
+                $('#ex_14_code').laycode({
+                    title: 'onselect 事件',
+                    skin:1,
+                    height:170,
+                    by:false
+                });
+
+                $('#ex_15').fselect({
+                    data:[['610100', '西安市', false],['610200', '铜川市', false],['610300', '宝鸡市', true],['610400', '咸阳市', false],['610500', '渭南市', false],['610600', '延安市', false],['610700', '汉中市', false],['610800', '榆林市', false],['610900', '安康市', false],['611000', '商洛市', false]]
+                });
+                $('#ex_15_code').laycode({
+                    title: '测试IE6 select 遮挡',
+                    skin:1,
+                    height:145,
+                    by:false
+                });
+            });
+        </script>
+    </body>
+</html>

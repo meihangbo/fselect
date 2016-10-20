@@ -1,0 +1,15 @@
+/*
+ * @title       example.css
+ * @author   meihangbo
+ * @email     meihangbo@126.com
+ * @version  1.0
+ * @update  2015-08-20
+ */
+body{margin:20px;}
+.example-box{font-size: 16px;}
+.example{font-size: 30px;}
+.ex-p{font-size: 20px;font-weight: 700;border-bottom: 1px solid #ccc;}
+
+.btn{border:1px solid #ccc;padding:5px;}
+.btn:hover{background-color:#f1f1f1;}
+
